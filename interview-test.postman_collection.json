@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "5be45605-1e7e-4082-80f1-c58cb105d0aa",
+		"name": "interview-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7947205"
+	},
+	"item": [
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjY1YjBiNmMxNDNkYmM1MGMzY2QyOGU5Iiwicm9sZSI6IlVTRVIifSwiaWF0IjoxNzE3MjQ1ODI3LCJleHAiOjE3NDg3ODE4Mjd9.PdwCI0dA1CMGT8_98Gdeh0dM00tCJIHArhr0-DwO_qs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"assignment 2\",\r\n    \"description\":\"IGNOU assignment 3\",\r\n    \"status\":\"pending\",\r\n    \"dueDate\":\"2024-06-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "get all task",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjY1YjBiNmMxNDNkYmM1MGMzY2QyOGU5Iiwicm9sZSI6IlVTRVIifSwiaWF0IjoxNzE3MjQ1ODI3LCJleHAiOjE3NDg3ODE4Mjd9.PdwCI0dA1CMGT8_98Gdeh0dM00tCJIHArhr0-DwO_qs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "task update by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjY1YjBiNmMxNDNkYmM1MGMzY2QyOGU5Iiwicm9sZSI6IlVTRVIifSwiaWF0IjoxNzE3MjQ1ODI3LCJleHAiOjE3NDg3ODE4Mjd9.PdwCI0dA1CMGT8_98Gdeh0dM00tCJIHArhr0-DwO_qs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"assignment\",\r\n    \"description\":\"IGNOU assignment\",\r\n    \"status\":\"done\",\r\n    \"dueDate\":\"2024-06-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/tasks/665b1ca3dcc13c65068fe8ae"
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjY1YjBiNmMxNDNkYmM1MGMzY2QyOGU5Iiwicm9sZSI6IlVTRVIifSwiaWF0IjoxNzE3MjQ1ODI3LCJleHAiOjE3NDg3ODE4Mjd9.PdwCI0dA1CMGT8_98Gdeh0dM00tCJIHArhr0-DwO_qs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/tasks/665b1ca3dcc13c65068fe8ae"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete tasks by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjY1YjBiNmMxNDNkYmM1MGMzY2QyOGU5Iiwicm9sZSI6IlVTRVIifSwiaWF0IjoxNzE3MjQ1ODI3LCJleHAiOjE3NDg3ODE4Mjd9.PdwCI0dA1CMGT8_98Gdeh0dM00tCJIHArhr0-DwO_qs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/tasks/665b1ca3dcc13c65068fe8ae"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kumariritesh919@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "user-signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kumariritesh919@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"first_name\":\"Ritesh\",\r\n    \"last_name\":\"Kumari\",\r\n    \"country_code\":\"+91\",\r\n    \"phone_number\":\"87007115164\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/auth/signup"
+			},
+			"response": []
+		}
+	]
+}
